@@ -1,28 +1,7 @@
 import type { PublicationItem } from "@/types";
 
 export const publications: PublicationItem[] = [
-  {
-    id: "pub1",
-    title: "Emergency Department Protocols in Acute Coronary Syndrome",
-    journal: "Journal of Emergency Medicine",
-    year: 2023,
-    summary: "A retrospective analysis of emergency department management protocols and patient outcomes in acute coronary syndrome cases.",
-    href: "#",
-  },
-  {
-    id: "pub2",
-    title: "Trauma Care Outcomes: A Multi-Center Study",
-    journal: "Indian Journal of Surgery",
-    year: 2022,
-    summary: "Multi-center collaborative study examining trauma care protocols and their impact on patient morbidity and mortality rates.",
-    href: "#",
-  },
-  {
-    id: "pub3",
-    title: "Clinical Education: Teaching Methods in Medical Schools",
-    journal: "Medical Education Today",
-    year: 2021,
-    summary: "Systematic review of evidence-based teaching methodologies and their effectiveness in clinical medical education.",
-    href: "#",
-  },
+  { id: "reticulocyte", title: "Evaluation of the clinical significance and diagnostic role of reticulocyte parameters in differentiating various anaemic presentations", journal: "International Journal of Clinical Obstetrics & Gynaecology", year: 2026, summary: "Patil, S. et al.", href: "#" },
+  { id: "breast-examination", title: "Diagnostic Potential of Self-Breast Examination as an Adjunct to Mammography: A Review", journal: "Bioinformation (PubMed Indexed)", year: 2025, summary: "Patil, S. et al.", href: "#" },
+  { id: "thyroid", title: "Assessment of thyroid disorders and menstrual disorders in the reproductive age group", journal: "International Journal of Advanced Community Medicine", year: 2022, summary: "Patil, S. et al.", href: "#" },
 ];

@@ -1,48 +1,24 @@
 import type { AboutContent } from "@/types";
 
 export const aboutContent: AboutContent = {
-  eyebrow: "About",
-  heading: "Dedicated to Clinical Excellence",
+  eyebrow: "Professional Summary",
+  heading: "Patient-Centered Acute Care",
   paragraphs: [
-    "With a strong foundation in emergency medicine and acute care, I am committed to delivering compassionate, evidence-based healthcare. My clinical practice emphasizes patient safety, teamwork, and continuous professional development.",
-    "I believe that excellent healthcare requires a combination of clinical expertise, empathy, and a commitment to lifelong learning. I am passionate about mentoring the next generation of healthcare professionals and contributing to medical research.",
+    "Highly motivated Acute Care Clinician dedicated to delivering patient-centered, high-quality medical services within the Australian healthcare system.",
+    "Grounded in safe, evidence-based practice and clinical governance, I combine acute trauma and emergency triage experience with a passion for clinical research and medical education.",
   ],
   expertise: [
-    {
-      id: "emergency",
-      title: "Emergency Medicine",
-      description: "Acute care, critical intervention, trauma management",
-    },
-    {
-      id: "cardiology",
-      title: "Cardiology",
-      description: "Cardiovascular assessment, acute coronary syndromes",
-    },
-    {
-      id: "trauma",
-      title: "Trauma Care",
-      description: "Multitrauma management, emergency procedures",
-    },
-    {
-      id: "education",
-      title: "Medical Education",
-      description: "Clinical teaching, curriculum development, mentoring",
-    },
-    {
-      id: "research",
-      title: "Research",
-      description: "Clinical outcomes, evidence-based practice",
-    },
-    {
-      id: "governance",
-      title: "Clinical Governance",
-      description: "Quality improvement, patient safety initiatives",
-    },
+    { id: "acute-care", title: "Acute & Emergency Care", description: "Acute trauma, emergency triage, stabilization and high-acuity clinical care" },
+    { id: "cardiology", title: "Cardiology & Critical Care", description: "ACS, arrhythmias, shock and multidisciplinary cardiac care" },
+    { id: "procedures", title: "Clinical Procedures", description: "Suturing, wound debridement, IV cannulation, catheterisation and NG tube insertion" },
+    { id: "governance", title: "Clinical Governance", description: "Evidence-based decision-making, records standards and quality improvement" },
+    { id: "education", title: "Medical Education", description: "USMLE-aligned content authoring, anatomy tutoring and student mentoring" },
+    { id: "research", title: "Clinical Research", description: "Research, publications and evidence-based practice" },
   ],
   highlights: [
-    { id: "experience", title: "8+", subtitle: "Years of Clinical Experience" },
-    { id: "students", title: "200+", subtitle: "Students Mentored" },
-    { id: "publications", title: "3+", subtitle: "Publications" },
-    { id: "certification", title: "ACLS", subtitle: "Certified" },
+    { id: "hours", title: "48+", subtitle: "Clinical hours per week" },
+    { id: "students", title: "200+", subtitle: "Students instructed" },
+    { id: "publications", title: "3", subtitle: "Publications" },
+    { id: "registration", title: "AMC", subtitle: "MCQ Examination cleared" },
   ],
 };

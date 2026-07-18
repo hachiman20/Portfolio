@@ -2,7 +2,7 @@ import type { NavigationContent } from "@/types";
 
 export const navigation: NavigationContent = {
   ariaLabel: "Primary",
-  homeAriaLabel: "Dr. Shubham Patil — home",
+  homeAriaLabel: "Shubham Patil — home",
   menuOpenLabel: "Open navigation menu",
   menuCloseLabel: "Close navigation menu",
   menuLabel: "Menu",

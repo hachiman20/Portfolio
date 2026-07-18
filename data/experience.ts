@@ -1,43 +1,9 @@
 import type { ExperienceItem } from "@/types";
 
 export const experiences: ExperienceItem[] = [
-  {
-    id: "medical-officer-cardio",
-    hospital: "U.N. Mehta Institute of Cardiology",
-    role: "Medical Officer",
-    department: "Department of Cardiology",
-    period: "2023 — Present",
-    highlights: [
-      "Acute coronary syndrome management",
-      "Cardiac emergency procedures",
-      "Echocardiography interpretation",
-      "Clinical research collaboration",
-    ],
-  },
-  {
-    id: "medical-officer-trauma",
-    hospital: "Civil Hospital Nadiad",
-    role: "Medical Officer",
-    department: "Emergency & Trauma",
-    period: "2022 — 2023",
-    highlights: [
-      "Multitrauma case management",
-      "Emergency interventions",
-      "Triage and stabilization",
-      "Team leadership",
-    ],
-  },
-  {
-    id: "medical-officer-general",
-    hospital: "GMERS Hospital",
-    role: "Junior Resident",
-    department: "General Medicine",
-    period: "2021 — 2022",
-    highlights: [
-      "General clinical practice",
-      "Patient management",
-      "Ward responsibilities",
-      "Clinical rotations",
-    ],
-  },
+  { id: "un-mehta", hospital: "U.N. Mehta Institute of Cardiology & Research Centre", role: "Medical Officer", department: "Department of Cardiology", period: "March 2026 – Present", highlights: ["Management of high-acuity cardiac emergencies including ACS, arrhythmias and shock", "Evidence-based clinical decision-making across intensive care units and specialised cardiac wards", "Multidisciplinary clinical workflows across adult and paediatric cardiology, CTVS and critical care"] },
+  { id: "siddhivinayak", hospital: "Siddhivinayak Surgical Hospital", role: "Medical Officer", department: "Surgery & Emergency (Trauma)", period: "July 2024 – January 2026", highlights: ["Rapid diagnostic triage and stabilisation of polytrauma presentations", "Wound debridement and surgical suturing under senior oversight", "Medico-legally compliant discharge summaries and clinical documentation"] },
+  { id: "civil-hospital", hospital: "Civil Hospital Nadiad", role: "Medical Officer", department: "Emergency Care", period: "September 2023 – October 2023", highlights: ["Rapid triage and diagnostic assessments in a high-volume public sector setting", "Autopsies under senior supervision", "Sensitive forensic documentation and communication with bereaved relatives"] },
+  { id: "gmers", hospital: "GMERS Hospital, Himmatnagar", role: "Junior Resident (Rotating Internship)", department: "Clinical Rotations", period: "April 2022 – April 2023", highlights: ["Rotations in surgery, OBGYN, emergency medicine, paediatrics, community medicine and general medicine", "Selected investigations and assembled clinical information for consultant review", "Performed IV cannulation, ABG sampling, urinary catheterisation and NG tube insertion under supervision"] },
+  { id: "khedbhrama", hospital: "SDH Khedbhrama", role: "Student Volunteer", department: "COVID-19 Response", period: "May 2021", highlights: ["Assisted respiratory distress management, prone positioning protocols and patient triage", "Supported high-dependency isolation units during COVID-19 surges"] },
 ];

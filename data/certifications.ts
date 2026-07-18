@@ -1,46 +1,9 @@
 import type { CertificationItem } from "@/types";
 
 export const certifications: CertificationItem[] = [
-  {
-    id: "acls",
-    title: "Advanced Cardiac Life Support",
-    issuer: "American Heart Association",
-    status: "Active",
-    year: 2024,
-  },
-  {
-    id: "bls",
-    title: "Basic Life Support",
-    issuer: "American Heart Association",
-    status: "Active",
-    year: 2024,
-  },
-  {
-    id: "oet",
-    title: "Occupational English Test - Grade B",
-    issuer: "OET Global",
-    status: "Active",
-    year: 2023,
-  },
-  {
-    id: "amc",
-    title: "AMC MCQ Examination",
-    issuer: "Australian Medical Council",
-    status: "Completed",
-    year: 2023,
-  },
-  {
-    id: "ahpra",
-    title: "AHPRA Eligibility",
-    issuer: "Australian Health Practitioner Regulation Agency",
-    status: "Eligible",
-    year: 2023,
-  },
-  {
-    id: "mbbs",
-    title: "Bachelor of Medicine, Bachelor of Surgery",
-    issuer: "Medical Institution",
-    status: "Completed",
-    year: 2021,
-  },
+  { id: "amc", title: "Australian Medical Council (AMC) MCQ Examination", issuer: "Australian Medical Council", status: "Successfully cleared", year: 2025 },
+  { id: "oet", title: "Occupational English Test (OET)", issuer: "OET", status: "Grade B across all sub-tests", year: 2025 },
+  { id: "ahpra", title: "AHPRA Standard Pathway", issuer: "Australian Health Practitioner Regulation Agency", status: "Fully eligible for Limited Registration", year: 2025 },
+  { id: "acls", title: "ACLS & BLS Recertification", issuer: "American Heart Association standards", status: "25 CPD hours", year: 2026 },
+  { id: "mbbs", title: "Bachelor of Medicine, Bachelor of Surgery (MBBS)", issuer: "GMERS Medical College, Himmatnagar", status: "Completed rotating internship", year: 2023 },
 ];
