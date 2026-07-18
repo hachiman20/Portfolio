@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { cardBase, sectionContainer, sectionPadding, SectionHeading, SectionLabel } from "@/components/SectionHeader";
 
 const publications = [
@@ -37,38 +40,43 @@ export default function Research() {
           Publications & Research
         </SectionHeading>
 
-        <ul className="mt-16 grid grid-cols-1 gap-5 sm:gap-6">
-          {publications.map(({ id, title, journal, year, summary }) => (
-            <li key={id}>
+        <motion.ul
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.06 } } }}
+          className="mt-16 grid grid-cols-1 gap-5 sm:gap-6"
+        >
+          {publications.map(({ id, title, journal, year, summary }, index) => (
+            <motion.li
+              key={id}
+              variants={{ hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0, transition: { duration: 0.35, delay: index * 0.04 } } }}
+              whileHover={{ y: -4, scale: 1.005 }}
+            >
               <article className={`${cardBase} p-6 sm:p-8`}>
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                    <h3 className="text-lg font-semibold tracking-[-0.01em] text-slate-900">
                       {title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-muted">
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600">
                       {summary}
                     </p>
                   </div>
                 </div>
-                <div className="mt-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-slate-100 pt-5">
+                <div className="mt-5 flex flex-col gap-3 border-t border-slate-100 pt-5 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex flex-col gap-1">
-                    <p className="text-sm font-medium text-accent">
-                      {journal}
-                    </p>
-                    <p className="text-xs text-muted">{year}</p>
+                    <p className="text-sm font-medium text-accent">{journal}</p>
+                    <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{year}</p>
                   </div>
-                  <a
-                    href="#"
-                    className="inline-flex text-sm font-medium text-accent hover:text-blue-700 transition-colors"
-                  >
+                  <a href="#" className="inline-flex text-sm font-medium text-accent transition-colors hover:text-blue-700">
                     Read Publication →
                   </a>
                 </div>
               </article>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </section>
   );

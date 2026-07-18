@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { cardBase, sectionContainer, sectionPadding, SectionHeading, SectionLabel } from "@/components/SectionHeader";
 
 const skillCategories = [
@@ -46,27 +49,34 @@ export default function ClinicalSkills() {
           Clinical Competencies
         </SectionHeading>
 
-        <ul className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <motion.ul
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}
+          className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6"
+        >
           {skillCategories.map(({ id, title, items }) => (
-            <li key={id}>
+            <motion.li
+              key={id}
+              variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.35 } } }}
+              whileHover={{ y: -4, scale: 1.01 }}
+            >
               <article className={`${cardBase} h-full p-6 sm:p-8`}>
-                <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                <h3 className="text-lg font-semibold tracking-[-0.01em] text-slate-900">
                   {title}
                 </h3>
                 <ul className="mt-6 space-y-3">
                   {items.map((item) => (
-                    <li
-                      key={item}
-                      className="text-sm leading-relaxed text-muted"
-                    >
+                    <li key={item} className="text-sm leading-relaxed text-slate-600">
                       • {item}
                     </li>
                   ))}
                 </ul>
               </article>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </section>
   );

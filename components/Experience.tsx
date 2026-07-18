@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { sectionContainer, sectionPadding, SectionHeading, SectionLabel } from "@/components/SectionHeader";
 
 const experiences = [
@@ -55,40 +58,41 @@ export default function Experience() {
           Clinical Journey
         </SectionHeading>
 
-        <ol className="relative mt-16 space-y-16 border-l border-slate-200 pl-8 sm:pl-10">
-          {experiences.map((item) => (
-            <li key={item.id} className="relative">
+        <ol className="relative mt-16 space-y-10 border-l border-slate-200 pl-8 sm:pl-10">
+          {experiences.map((item, index) => (
+            <motion.li
+              key={item.id}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.35, delay: index * 0.06 }}
+              className="relative rounded-[1.5rem] border border-slate-200/80 bg-white/85 p-6 shadow-[0_20px_50px_-30px_rgba(15,23,42,0.28)] sm:p-8"
+            >
               <span
                 aria-hidden="true"
-                className="absolute -left-[2.125rem] top-2 h-4 w-4 rounded-full border-2 border-white bg-accent sm:-left-[2.625rem]"
+                className="absolute -left-[2.125rem] top-7 h-4 w-4 rounded-full border-2 border-white bg-accent sm:-left-[2.625rem]"
               />
 
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+                  <h3 className="text-xl font-semibold tracking-[-0.01em] text-slate-900 sm:text-2xl">
                     {item.hospital}
                   </h3>
                   <p className="mt-1 text-lg font-medium text-accent">{item.role}</p>
-                  <p className="mt-1 text-sm text-muted">{item.department}</p>
+                  <p className="mt-1 text-sm text-slate-600">{item.department}</p>
                 </div>
-                <p className="text-sm font-medium text-muted">{item.period}</p>
+                <p className="text-sm font-medium text-slate-500">{item.period}</p>
               </div>
 
               <ul className="mt-6 space-y-3">
                 {item.highlights.map((highlight) => (
-                  <li
-                    key={highlight}
-                    className="flex gap-3 text-base leading-relaxed text-muted"
-                  >
-                    <span
-                      aria-hidden="true"
-                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
-                    />
+                  <li key={highlight} className="flex gap-3 text-base leading-relaxed text-slate-600">
+                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                     {highlight}
                   </li>
                 ))}
               </ul>
-            </li>
+            </motion.li>
           ))}
         </ol>
       </div>

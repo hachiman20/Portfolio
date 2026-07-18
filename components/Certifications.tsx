@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { cardBase, sectionContainer, sectionPadding, SectionHeading, SectionLabel } from "@/components/SectionHeader";
 
 const certifications = [
@@ -57,30 +60,34 @@ export default function Certifications() {
           Certifications & Qualifications
         </SectionHeading>
 
-        <ul className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+        <motion.ul
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}
+          className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5"
+        >
           {certifications.map(({ id, title, issuer, status, year }) => (
-            <li key={id}>
+            <motion.li
+              key={id}
+              variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.35 } } }}
+              whileHover={{ y: -4, scale: 1.01 }}
+            >
               <article className={`${cardBase} h-full p-6 sm:p-7`}>
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1">
-                    <h3 className="font-semibold tracking-tight text-foreground">
-                      {title}
-                    </h3>
-                    <p className="mt-2 text-sm text-muted">
-                      {issuer}
-                    </p>
+                    <h3 className="font-semibold tracking-[-0.01em] text-slate-900">{title}</h3>
+                    <p className="mt-2 text-sm text-slate-600">{issuer}</p>
                   </div>
-                  <span className="inline-flex items-center rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-medium text-green-700">
+                  <span className="inline-flex items-center rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-medium text-emerald-700">
                     {status}
                   </span>
                 </div>
-                <p className="mt-4 text-xs text-muted border-t border-slate-100 pt-4">
-                  {year}
-                </p>
+                <p className="mt-4 border-t border-slate-100 pt-4 text-xs uppercase tracking-[0.2em] text-slate-500">{year}</p>
               </article>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </section>
   );

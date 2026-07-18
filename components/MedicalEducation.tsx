@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { cardBase, sectionContainer, sectionPadding, SectionHeading, SectionLabel } from "@/components/SectionHeader";
 
 const educationItems = [
@@ -36,30 +39,32 @@ export default function MedicalEducation() {
           Medical Education & Leadership
         </SectionHeading>
 
-        <ul className="mt-16 grid grid-cols-1 gap-5 sm:gap-6">
+        <motion.ul
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.06 } } }}
+          className="mt-16 grid grid-cols-1 gap-5 sm:gap-6"
+        >
           {educationItems.map(({ id, title, institution, description, period }) => (
-            <li key={id}>
+            <motion.li
+              key={id}
+              variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.35 } } }}
+              whileHover={{ y: -4, scale: 1.005 }}
+            >
               <article className={`${cardBase} p-6 sm:p-8`}>
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold tracking-tight text-foreground">
-                      {title}
-                    </h3>
-                    <p className="mt-1 text-sm font-medium text-accent">
-                      {institution}
-                    </p>
-                    <p className="mt-3 text-base leading-relaxed text-muted">
-                      {description}
-                    </p>
+                    <h3 className="text-lg font-semibold tracking-[-0.01em] text-slate-900">{title}</h3>
+                    <p className="mt-1 text-sm font-medium text-accent">{institution}</p>
+                    <p className="mt-3 text-base leading-relaxed text-slate-600">{description}</p>
                   </div>
                 </div>
-                <p className="mt-5 text-sm text-muted border-t border-slate-100 pt-5">
-                  {period}
-                </p>
+                <p className="mt-5 border-t border-slate-100 pt-5 text-sm text-slate-500">{period}</p>
               </article>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </section>
   );

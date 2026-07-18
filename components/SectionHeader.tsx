@@ -1,10 +1,12 @@
+import type { ReactNode } from "react";
+
 type SectionLabelProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export function SectionLabel({ children }: SectionLabelProps) {
   return (
-    <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
+    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-slate-500">
       {children}
     </p>
   );
@@ -12,7 +14,7 @@ export function SectionLabel({ children }: SectionLabelProps) {
 
 type SectionHeadingProps = {
   id?: string;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 };
 
@@ -20,7 +22,7 @@ export function SectionHeading({ id, children, className = "" }: SectionHeadingP
   return (
     <h2
       id={id}
-      className={`text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl ${className}`}
+      className={`text-3xl font-semibold leading-[1.05] tracking-[-0.02em] text-slate-900 sm:text-4xl lg:text-[2.75rem] ${className}`}
     >
       {children}
     </h2>
@@ -28,6 +30,6 @@ export function SectionHeading({ id, children, className = "" }: SectionHeadingP
 }
 
 export const sectionContainer = "mx-auto w-full max-w-7xl";
-export const sectionPadding = "px-6 py-20 lg:px-8 lg:py-28";
+export const sectionPadding = "px-6 py-20 sm:px-8 lg:px-10 lg:py-28";
 export const cardBase =
-  "rounded-2xl border border-slate-200 bg-white transition-all duration-200 hover:shadow-md hover:border-slate-300";
+  "rounded-[1.75rem] border border-slate-200/80 bg-white/90 shadow-[0_20px_50px_-28px_rgba(15,23,42,0.28)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_28px_60px_-24px_rgba(15,23,42,0.34)]";
