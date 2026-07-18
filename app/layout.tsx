@@ -1,40 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { metadataContent } from "@/data/metadata";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const metadata: Metadata = { title: metadataContent.title, description: metadataContent.description, keywords: metadataContent.keywords, openGraph: { title: metadataContent.openGraph.title, description: metadataContent.openGraph.description, type: "website" }, twitter: { card: "summary_large_image", title: metadataContent.twitter.title, description: metadataContent.twitter.description } };
 
-export const metadata: Metadata = {
-  title: "Dr. Shubham Patil — Medical Officer & Clinical Educator",
-  description:
-    "Experienced Medical Officer specializing in emergency medicine, trauma care, and cardiology. Dedicated to clinical excellence, patient care, and medical education.",
-  openGraph: {
-    title: "Dr. Shubham Patil — Medical Officer & Clinical Educator",
-    description:
-      "Emergency Medicine | Trauma Care | Cardiology | Medical Education",
-    type: "website",
-  },
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
-  );
-}
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}><body className="flex min-h-full flex-col">{children}</body></html>; }
