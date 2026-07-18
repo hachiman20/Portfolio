@@ -1,12 +1,15 @@
 import About from "@/components/About";
+import Certifications from "@/components/Certifications";
+import ClinicalSkills from "@/components/ClinicalSkills";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
-import FeaturedWork from "@/components/FeaturedWork";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import MedicalEducation from "@/components/MedicalEducation";
 import Navbar from "@/components/Navbar";
 import Philosophy from "@/components/Philosophy";
-import TechStack from "@/components/TechStack";
+import QuickHighlights from "@/components/QuickHighlights";
+import Research from "@/components/Research";
 import Transition from "@/components/Transition";
 
 export default function Home() {
@@ -15,12 +18,15 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <QuickHighlights />
         <Transition />
         <About />
         <Experience />
-        <FeaturedWork />
+        <ClinicalSkills />
+        <Research />
+        <MedicalEducation />
+        <Certifications />
         <Philosophy />
-        <TechStack />
         <Contact />
       </main>
       <Footer />

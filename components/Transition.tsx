@@ -11,23 +11,21 @@ export default function Transition() {
 
       <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center py-20 text-center lg:py-28">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted">
-          Scroll to explore
+          Clinical Focus
         </p>
 
         <h2
           id="transition-heading"
           className="mt-8 max-w-3xl text-3xl font-semibold leading-snug tracking-tight text-foreground sm:text-4xl lg:text-5xl"
         >
-          Building software
+          Excellence in emergency care,
           <br />
-          that scales people,
-          <br />
-          not just systems.
+          education and research.
         </h2>
 
         <div
           aria-hidden="true"
-          className="mt-10 h-px w-[120px] bg-white/20"
+          className="mt-10 h-px w-[120px] bg-slate-300"
         />
       </div>
     </section>

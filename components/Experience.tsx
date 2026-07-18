@@ -2,23 +2,43 @@ import { sectionContainer, sectionPadding, SectionHeading, SectionLabel } from "
 
 const experiences = [
   {
-    id: "amazon",
-    company: "Amazon",
-    role: "Software Development Engineer II",
+    id: "medical-officer-cardio",
+    hospital: "U.N. Mehta Institute of Cardiology",
+    role: "Medical Officer",
+    department: "Department of Cardiology",
     period: "2023 — Present",
     highlights: [
-      "Designed developer platforms",
-      "Built backend services",
-      "Improved engineering productivity",
-      "Worked on AI-assisted automation",
+      "Acute coronary syndrome management",
+      "Cardiac emergency procedures",
+      "Echocardiography interpretation",
+      "Clinical research collaboration",
     ],
   },
   {
-    id: "previous",
-    company: "Previous Company",
-    role: "Software Engineer",
-    period: "2021 — 2023",
-    highlights: ["Worked on cloud backend systems"],
+    id: "medical-officer-trauma",
+    hospital: "Civil Hospital Nadiad",
+    role: "Medical Officer",
+    department: "Emergency & Trauma",
+    period: "2022 — 2023",
+    highlights: [
+      "Multitrauma case management",
+      "Emergency interventions",
+      "Triage and stabilization",
+      "Team leadership",
+    ],
+  },
+  {
+    id: "medical-officer-general",
+    hospital: "GMERS Hospital",
+    role: "Junior Resident",
+    department: "General Medicine",
+    period: "2021 — 2022",
+    highlights: [
+      "General clinical practice",
+      "Patient management",
+      "Ward responsibilities",
+      "Clinical rotations",
+    ],
   },
 ] as const;
 
@@ -32,36 +52,37 @@ export default function Experience() {
       <div className={sectionContainer}>
         <SectionLabel>Experience</SectionLabel>
         <SectionHeading id="experience-heading" className="mt-6">
-          Where I&apos;ve built
+          Clinical Journey
         </SectionHeading>
 
-        <ol className="relative mt-16 space-y-16 border-l border-white/[0.06] pl-8 sm:pl-10">
+        <ol className="relative mt-16 space-y-16 border-l border-slate-200 pl-8 sm:pl-10">
           {experiences.map((item) => (
             <li key={item.id} className="relative">
               <span
                 aria-hidden="true"
-                className="absolute -left-[2.125rem] top-2 h-3 w-3 rounded-full border-2 border-background bg-accent sm:-left-[2.625rem]"
+                className="absolute -left-[2.125rem] top-2 h-4 w-4 rounded-full border-2 border-white bg-accent sm:-left-[2.625rem]"
               />
 
               <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
                 <div>
                   <h3 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
-                    {item.company}
+                    {item.hospital}
                   </h3>
-                  <p className="mt-1 text-lg text-foreground/90">{item.role}</p>
+                  <p className="mt-1 text-lg font-medium text-accent">{item.role}</p>
+                  <p className="mt-1 text-sm text-muted">{item.department}</p>
                 </div>
-                <p className="text-sm text-muted">{item.period}</p>
+                <p className="text-sm font-medium text-muted">{item.period}</p>
               </div>
 
               <ul className="mt-6 space-y-3">
                 {item.highlights.map((highlight) => (
                   <li
                     key={highlight}
-                    className="flex gap-3 text-lg leading-relaxed text-muted"
+                    className="flex gap-3 text-base leading-relaxed text-muted"
                   >
                     <span
                       aria-hidden="true"
-                      className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-accent-cyan"
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
                     />
                     {highlight}
                   </li>

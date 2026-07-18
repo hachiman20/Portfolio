@@ -27,7 +27,7 @@ export function SectionHeading({ id, children, className = "" }: SectionHeadingP
   );
 }
 
-export const sectionContainer = "mx-auto w-full max-w-7xl py-20 lg:py-28";
-export const sectionPadding = "px-6 lg:px-8";
+export const sectionContainer = "mx-auto w-full max-w-7xl";
+export const sectionPadding = "px-6 py-20 lg:px-8 lg:py-28";
 export const cardBase =
-  "rounded-2xl border border-white/[0.06] bg-surface transition-transform duration-200 hover:-translate-y-1";
+  "rounded-2xl border border-slate-200 bg-white transition-all duration-200 hover:shadow-md hover:border-slate-300";

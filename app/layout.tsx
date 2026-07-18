@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anurag Giri — Software Development Engineer",
+  title: "Dr. Shubham Patil — Medical Officer & Clinical Educator",
   description:
-    "Software Development Engineer II building AI-powered developer tools, backend platforms, and automation systems that simplify complex engineering workflows.",
+    "Experienced Medical Officer specializing in emergency medicine, trauma care, and cardiology. Dedicated to clinical excellence, patient care, and medical education.",
   openGraph: {
-    title: "Anurag Giri — Software Development Engineer",
+    title: "Dr. Shubham Patil — Medical Officer & Clinical Educator",
     description:
-      "Building AI-powered developer tools, backend platforms, and automation systems.",
+      "Emergency Medicine | Trauma Care | Cardiology | Medical Education",
     type: "website",
   },
 };
