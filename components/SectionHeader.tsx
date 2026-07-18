@@ -30,6 +30,6 @@ export function SectionHeading({ id, children, className = "" }: SectionHeadingP
 }
 
 export const sectionContainer = "mx-auto w-full max-w-7xl";
-export const sectionPadding = "px-6 py-20 sm:px-8 lg:px-10 lg:py-28";
+export const sectionPadding = "px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-28";
 export const cardBase =
   "rounded-[1.75rem] border border-slate-200/80 bg-white/90 shadow-[0_20px_50px_-28px_rgba(15,23,42,0.28)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-[0_28px_60px_-24px_rgba(15,23,42,0.34)]";
