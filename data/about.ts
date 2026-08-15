@@ -16,7 +16,7 @@ export const aboutContent: AboutContent = {
     { id: "research", title: "Clinical Research", description: "Research, publications and evidence-based practice" },
   ],
   highlights: [
-    { id: "hours", title: "48+", subtitle: "Clinical hours per week" },
+    { id: "hours", title: "3+ Years", subtitle: "Clinical experience" },
     { id: "students", title: "200+", subtitle: "Students instructed" },
     { id: "publications", title: "3", subtitle: "Publications" },
     { id: "registration", title: "AMC", subtitle: "MCQ Examination cleared" },

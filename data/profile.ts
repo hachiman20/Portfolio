@@ -5,7 +5,7 @@ export const profile: ProfileContent = {
   badge: "MBBS • Acute Care Clinician • Medical Educator",
   heroTitle: "Shubham Patil",
   heroDescription:
-    "Acute Care Clinician dedicated to delivering patient-centered, high-quality medical services.",
+    "MBBS · Acute Care Clinician · Medical Educator\nMedical Officer with experience across emergency, trauma and cardiology, seeking RMO opportunities in Australia.",
   heroSupportText:
     "Experienced in consultant-supported, multidisciplinary teams, with a background in acute trauma, emergency triage, clinical research, and medical education.",
   location: "Ahmedabad, Gujarat, India",
