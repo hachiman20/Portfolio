@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Certifications from "@/components/Certifications";
+import ChatWidget from "@/components/ChatWidget";
 import ClinicalSkills from "@/components/ClinicalSkills";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
@@ -11,11 +12,13 @@ import Philosophy from "@/components/Philosophy";
 import QuickHighlights from "@/components/QuickHighlights";
 import Research from "@/components/Research";
 import Transition from "@/components/Transition";
+import ViewCounter from "@/components/ViewCounter";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <ViewCounter />
       <main>
         <Hero />
         <QuickHighlights />
@@ -30,6 +33,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ChatWidget />
     </>
   );
 }
